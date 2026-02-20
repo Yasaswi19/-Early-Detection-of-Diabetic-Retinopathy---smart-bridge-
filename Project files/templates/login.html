@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DR Login Page</title>
+
+<style>
+
+/* ================= BODY ================= */
+
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f2f2f2;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    background:#2c2c34;
+    color:white;
+    padding:15px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.navbar h2{
+    margin:0;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    font-weight:bold;
+    position:relative;
+    padding-bottom:6px;
+}
+
+/* Hover underline */
+.nav-links a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:0%;
+    height:3px;
+    background:#00c6ff;
+    transition:0.3s;
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+/* Active page underline */
+.nav-links a.active::after{
+    width:100%;
+}
+
+/* ================= LOGIN BOX ================= */
+
+.login-container{
+    width:400px;
+    margin:90px auto;
+    background:white;
+    padding:40px;
+    border-radius:8px;
+    box-shadow:0 0 15px rgba(0,0,0,0.2);
+    text-align:center;
+}
+
+/* Input fields */
+
+.input-box{
+    width:100%;
+    padding:12px;
+    margin:12px 0;
+    border:1px solid #ccc;
+    border-radius:5px;
+    font-size:15px;
+    outline:none;
+    transition:0.3s;
+}
+
+/* BLUE HIGHLIGHT ON CLICK */
+
+.input-box:focus{
+    border-color:#00c6ff;
+    box-shadow:0 0 8px rgba(0,198,255,0.6);
+}
+
+/* Login Button */
+
+.login-btn{
+    width:100%;
+    padding:12px;
+    margin-top:15px;
+    background:#555;
+    color:white;
+    border:none;
+    border-radius:5px;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.login-btn:hover{
+    background:#00c6ff;
+}
+
+/* Bottom text */
+
+.bottom-text{
+    margin-top:18px;
+    font-size:14px;
+}
+
+.bottom-text a{
+    color:#007bff;
+    text-decoration:none;
+}
+
+.bottom-text a:hover{
+    text-decoration:underline;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<div class="navbar">
+    <h2>DR Detection</h2>
+
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="login.html" class="active">Login</a>
+        <a href="register.html">Register</a>
+    </div>
+</div>
+
+<!-- LOGIN FORM -->
+
+<div class="login-container">
+
+<form onsubmit="return loginUser()">
+
+    <input type="email" id="email" class="input-box"
+           placeholder="Enter registered email ID" required>
+
+    <input type="password" id="password" class="input-box"
+           placeholder="Enter Password" required>
+
+    <button type="submit" class="login-btn">Login</button>
+
+</form>
+
+<div class="bottom-text">
+    Don't have an account? <a href="register.html">Register</a>
+</div>
+
+</div>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+function loginUser(){
+
+    // (No backend — demo only)
+    alert("Login Successful!");
+
+    // Redirect to Home Page
+    window.location.href = "prediction.html";
+
+    return false;
+}
+
+</script>
+
+</body>
+</html>

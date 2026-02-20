@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Logged Out</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f2f2f2;
+}
+
+/* NAVBAR */
+.navbar{
+    background:#2c3e50;
+    color:white;
+    padding:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:bold;
+}
+
+/* CENTER BOX */
+.container{
+    text-align:center;
+    margin-top:120px;
+}
+
+.container h1{
+    color:#333;
+}
+
+.container p{
+    color:green;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+/* LOGIN BUTTON */
+.btn{
+    margin-top:20px;
+    padding:12px 40px;
+    background:#2c2c2c;
+    color:white;
+    border:none;
+    font-size:16px;
+    cursor:pointer;
+    border-radius:4px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#000;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <h2>Diabetic Retinopathy</h2>
+
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+    </div>
+</div>
+
+<!-- LOGOUT MESSAGE -->
+<div class="container">
+
+    <h1>Successfully Logged Out!</h1>
+
+    <p>Login for more information</p>
+
+    <button class="btn" onclick="goLogin()">Login</button>
+
+</div>
+
+<script>
+function goLogin(){
+    window.location.href = "login.html";
+}
+</script>
+
+</body>
+</html>
